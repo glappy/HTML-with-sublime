@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>html5</title>
+	<style>
+		header{font-size: 30px;
+			background-color: blue;
+			color: white;
+			text-align: center;}
+		nav{width: 20%;
+			float:left;	}
+		article{width: 60%;
+				float: left;}
+		section:after{
+			content: ""
+			display:table;
+			clear: both;
+		}
+		ol#citi{
+			list-style-type: none;
+		}
+		footer{background-color: blue;
+			color: white;}
+	</style>
+</head>
+<body>
+	<!--
+		header
+		cities
+		문자열크게
+		바탕 blue
+		글자색 white
+
+		nav
+		1.london
+		2.paris
+		3.seoul
+		4.newyork
+		머리글 보이지 않음
+
+		본문
+		런던에 대한 간단한 소개 표시
+
+		footer
+		email address
+		바탕 blue
+		글자 white
+		nav와 본문은 가로방향으로 배치-->
+	<header><h1>cities</h1></header>
+	
+	<section>
+	<nav>
+		<ol id="citi">
+			<li>london</li>
+			<li>paris</li>
+			<li>seoul</li>
+			<li>newyork</li>
+		</ol>>
+	<article>런던은...영국 도시이다. 런던은 런던이다. 런던은 베이징이 아니다.</article>
+	<footer>copyright &copy; glappy@naver.com</footer>
+	</nav>
+	</section>
+</body>
+</html>

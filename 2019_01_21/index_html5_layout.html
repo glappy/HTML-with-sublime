@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>html5 layout</title>
+	<style>
+		header{
+			background-color: #666;
+			padding: 30px;
+			text-align: center;
+			font-size: 35px;
+			color: white;
+		}
+		nav{
+			float: left;
+			width: 30;
+			background-color: #ccc;
+			padding: 20px;
+		}
+		nav ul{
+			list-style-type: none;
+			padding: 0;
+		}
+		article{
+			float: left;
+			padding: 20px;
+			width: 70%;
+			background-color: #f1f1f1;
+			height: 300px;
+		}
+		section:after{
+			content: "";
+			display: table;
+			clear: both;
+		}
+		footer{
+			background-color: #777;
+			padding: 10px;
+			text-align: center;
+			color: white;
+		}
+	</style>
+	<!-- 대개 화면은
+				header
+		menu(nav)	|	본문
+				footer로 구성
+		block을 한줄에 보이기 위해서는 width로 조정하고 float을 left로 설정한다.-->
+</head>
+<body>
+	<header><h2>내 이리 말을 하면</h2></header>
+	<section>
+		<nav>
+			<ul>
+				<li><a href="#">또 네 분기에 불을 질러주는 꼴이 되겠지만</a></li>
+				<li><a href="#">나는 여지껏 그리 형형한 눈을 가진 아이를 만나본 일이 없다</a></li>
+				<li><a href="#">재주가 느는 속도는 또 어땠누</a></li>
+				<li><a href="#">하나를 가르치면 열을 알고</a></li>
+				<li><a href="#">열을 가르치면 백으로 응용을 하고</a></li>
+
+		</nav>
+		<article>
+			<h3>그아이와 더불어 참으로 오랜만에 흥진 춤을 추었다.</h3>
+			<p>또한 그 아이는 내게 큰 가르침을 주었다.</p>
+		</article>
+	</section>
+	<footer>copyrihgt &copy; glappy@naver.com</footer>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Text Decoration</title>
+	<style>
+	/* style 지정*/
+	/* tag에 직접 지정하는 방법*/
+	p{color: blue; /*문자열에 공통으로 파란색 적용*/}
+	/* id에 지정하는 방법*/
+	/*id는 pk와 원리가 같아서 한 문서 내에서 같은 id는 선언될 수 없음*/
+	/*선언되지 않은 id도 style을 지정할 수 있다*/
+	/*선택자, selector라 한다.*/
+
+	#p1{ background-color: yellow; }
+	#p2{background-color: green;}
+	/*class에 지정하는 방법*/
+	/*class는 여러 곳에 동시에 지정하고자 할 때*/
+	.no1{font-size: 20pt;}
+	.no2{font-weight: bold;
+		font-style: italic;}
+	 #t1{font-color : gray;
+	 	font-size: 20pt;
+	 	font-style: italic;}
+	 #bq{color: blue;
+	 	font-size: 20pt;}
+	 <!--일일히 다 지정하기 보다 여기서 모아서 설정하면 범위가 커졌을 때 관리하기 쉬움.-->
+	</style>
+
+</head>
+<body>
+
+
+<p id="p1" class="no1"><i>금본위제</i>란 화폐단위의 가치와 <b>금</b>의 일정량의 <s>가치</s>가 등가관계를 유지하는 <u>본위제도</u>를 말한다</p>
+<p class="no2">금본위제란 화폐단위의 가치와 금의 일정량의 가치가 등가관계를 유지하는 본위제도를 말한다</p>
+<!--p tag으로 작성된 문서 전체에 효과를 줄 때는 style에서 지정을 하고, 특별 단어에 효과를 줄때는 각 단어를 <>로 감싼다.-->
+
+<p class="no1"> 문서를 강조하거나 중요도를 표시하는 tag<strong>강조</strong> <em>중요도</em>
+<!-- html초창기에 문서 교환 많이 했음. strong이나 em에 둘러쌓인 단어를 찾아내기 위함.-->
+<p class="no1">간단한 수식에서 윗첨자를 적을 때는 sup으로 감싸줌. 2<sup>2</sup> 10<sub>2</sub></p>
+
+<p id="p2" class="no1">금본위제란 화폐단위의 가치와 금의 일정량의 가치가 등가관계를 유지하는 본위제도를 말한다</p>
+<p class="no2"><font color="purple" face="고딕체" size="20">금본위제란 화폐단위의 가치와 금의 일정량의 가치가 등가관계를 유지하는 본위제도를 말한다</p>
+<!-- 최근에는 위와 같이 지정하지 않음. 알아두기만 할 것.-->
+
+<p class="no1"><span style="font-color:red; font-size=30pt;">금본위제</span>란 화폐단위의 가치와 금의 일정량의 가치가 등가관계를 유지하는 본위제도를 말한다</p>
+<!-- 위코드도 아주 바람직한 코드는 아님. 다만 현장에서 그리 쓰이는 경우가 있기는 함.-->
+<p class="no2"><span id="t1">금본위제</span>란 화폐단위의 가치와 금의 일정량의 가치가 등가관계를 유지하는 본위제도를 말한다</p>
+
+<p class="no2"><insert>금본위제란</insert> 화폐단위의 가치와 금의 <del>일정량의</del> 가치가 <mark>등가관계를</mark> <span style="background-color : green; color : yellow;">유지하는</span> 본위제도를 말한다</p>
+<p class="no2"><blockquote id="bq" cite="http://goldstandard.com">금본위제란 화폐단위의 가치와 금의 일정량의 가치가 <q>등가관계</q>를 유지하는 본위제도를 말한다</blockquote></p>
+
+
+<abbr id="ab" title="금본위제 정의">금본위제란 화폐단위의 가치와 금의 일정량의 가치가</abbr> <abbr title="the definition of goldstandard">등가관계를 유지하는 본위제도를 말한다</abbr>
+
+<footer>copyright &copy <address>glappy@naver.com</address></footer>
+</body>
+</html>
