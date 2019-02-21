@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		.flex-container{
+			display: flex;/* ms 브라우저에 호환성 주기 위함*/
+			-ms-display: flex;
+		}
+		.items{
+			height: 100px;
+			border:1px solid blue;
+			background-color: #aaa;
+			margin: 3px;
+			/*box내부 컨텐츠를 가로세로 중앙에 배치*/
+
+			display: flex;
+			align-items: center;
+			justify-content: center;/*어떤 컨텐츠라도 가운데 정렬 하여라.*/
+			flex-flow: column wrap;
+
+			-ms-display: flex;
+			-ms-align-items: center;
+			-ms-justify-content: center;/*어떤 컨텐츠라도 가운데 정렬 하여라.*/
+			-ms-flex-flow: column wrap;
+		}
+		#item1{
+			/*flex:0 0 auto; grow, shrink basic지정해서 가로 정렬 시키는 옵션
+			flex는 기본, inline-flex는 한줄*/
+			flex :1 ;
+		}
+		#item2{
+			flex :5 ;
+		}
+		#item3{
+			flex :3 ;/*각 칸이 1:5:3: 비율로 나눠질 것.
+			화면을 줄이면 박스가 내려가는 것이 아니라 전체 크기가 줄어듦*/
+		}
+		#item4{
+			flex :100px ; /* 단위를 맞출 것. %, px, 숫자 */
+			height: auto; /* 문자열이 길어지면 박스가 알아서 높이를 맞춤. 문자열이 박스 밖으로 나오지 않음.*/
+		}
+		#item5{
+			flex :500px ;
+		}
+		#item6{
+			flex :200px ;
+		}
+		#subitem6{
+			width:30px;
+			height:30px;
+			background-color: yellow;/* 박스 안의 박스가 중앙정렬됨.*/
+		}
+	</style>
+</head>
+<body>
+<div class="flex-container"></div>
+	<div id="item1" class="items">1:1</div>
+	<div id="item2" class="items">2:5</div>
+	<div id="item3" class="items">3:3</div>
+<div class="flex-container"></div>
+	<div id="item4" class="items">
+	<!--너무 많은 문자열을 쓰게 되면 레이어가 무너짐. px로 고정시켜주면 해결.
+		다만 영문자를 길게 iuyhgjklkjh와 같이 입력하면 한 단어로 인식하므로 중간에 빈칸 넣어 줄 것.-->
+가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하</div>
+	<div id="item5" class="items">5:5</div>
+	<div id="item6" class="items">
+		<div id="subitem6">6:3</div>
+	</div>
+</body>
+</html>
+<!-- 문자열을 세로정렬 하는 것은 정말 힘듦. flex box를 사용하면 쉬워짐-->
